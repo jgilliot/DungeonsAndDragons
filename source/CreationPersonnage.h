@@ -7,7 +7,7 @@ void affiche_menu();
 void start_game();
 
 // Creation du personnage
-Hero * creation_hero();
+void creation_hero();
 char * choix_nom();
 int choix_classe();
 int choix_race();

@@ -6,6 +6,8 @@
 class Mob : public Combattant{
 public:
 Mob(char * nom, char * race, char * classe,int lvl);
+
+// faire fonction pour créer mob aléatoirement.
 };
 
 #endif

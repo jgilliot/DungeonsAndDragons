@@ -16,7 +16,7 @@ if(strcmp(race,"Orc")==0){
 	this->setIntelligenceBase(0);
 	this->setEnduranceBase(50);
 	this->setChanceBase(0);
-	this->setIcone(&icones[0]);
+	this->setIcone(&icones_race[0]);
 	}
 else if(strcmp(race,"Elfe")==0){
 	this->setRace("Elfe");
@@ -25,7 +25,7 @@ else if(strcmp(race,"Elfe")==0){
 	this->setIntelligenceBase(10);
 	this->setEnduranceBase(30);
 	this->setChanceBase(50);
-	this->setIcone(&icones[2]);
+	this->setIcone(&icones_race[2]);
 }
 else{
 	this->setRace("Humain");
@@ -34,7 +34,7 @@ else{
 	this->setIntelligenceBase(150);
 	this->setEnduranceBase(40);
 	this->setChanceBase(10);
-	this->setIcone(&icones[1]);
+	this->setIcone(&icones_race[1]);
 }
 
 if(strcmp(classe,"Archer")==0){

@@ -24,6 +24,7 @@ extern const unsigned char icone_elfe_Sprite[4096] __attribute__ ((aligned (4)))
 extern const unsigned char icone_gobelin_Sprite[4096] __attribute__ ((aligned (4))) ;  // Pal : icone_Pal
 extern const unsigned char icone_araignee_Sprite[4096] __attribute__ ((aligned (4))) ;  // Pal : icone_Pal
 extern const unsigned char icone_squelette_Sprite[4096] __attribute__ ((aligned (4))) ;  // Pal : icone_Pal
+extern const unsigned char icone_epee1_Sprite[1024] __attribute__ ((aligned (4))) ;  // Pal : icone_Pal
 extern const unsigned char classe_guerrier_Sprite[4096] __attribute__ ((aligned (4))) ;  // Pal : classe_Pal
 extern const unsigned char classe_archer_Sprite[4096] __attribute__ ((aligned (4))) ;  // Pal : classe_Pal
 extern const unsigned char classe_mage_Sprite[4096] __attribute__ ((aligned (4))) ;  // Pal : classe_Pal
@@ -42,7 +43,7 @@ extern PAGfx_struct bg_cells; // background pointer
 
 
 // Palette files : 
-extern const unsigned short icone_Pal[221] __attribute__ ((aligned (4))) ;
+extern const unsigned short icone_Pal[239] __attribute__ ((aligned (4))) ;
 extern const unsigned short classe_Pal[67] __attribute__ ((aligned (4))) ;
 extern const unsigned short ui_Pal[2] __attribute__ ((aligned (4))) ;
 extern const unsigned short bg_blanc_Pal[2] __attribute__ ((aligned (4))) ;

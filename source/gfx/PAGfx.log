@@ -4,13 +4,14 @@ If you have suggestions, problems, or anything, please mail me at mollusk@palib.
 Converting PAGfx.ini
 Transparent Color : Magenta
 
-10 sprites :
+11 sprites :
   icone_orc : 256colors, 64x64, Pal : icone_Pal, -> icone_orc_Sprite
   icone_humain : 256colors, 64x64, Pal : icone_Pal, -> icone_humain_Sprite
   icone_elfe : 256colors, 64x64, Pal : icone_Pal, -> icone_elfe_Sprite
   icone_gobelin : 256colors, 64x64, Pal : icone_Pal, -> icone_gobelin_Sprite
   icone_araignee : 256colors, 64x64, Pal : icone_Pal, -> icone_araignee_Sprite
   icone_squelette : 256colors, 64x64, Pal : icone_Pal, -> icone_squelette_Sprite
+  icone_epee1 : 256colors, 32x32, Pal : icone_Pal, -> icone_epee1_Sprite
   classe_guerrier : 256colors, 64x64, Pal : classe_Pal, -> classe_guerrier_Sprite
   classe_archer : 256colors, 64x64, Pal : classe_Pal, -> classe_archer_Sprite
   classe_mage : 256colors, 64x64, Pal : classe_Pal, -> classe_mage_Sprite
@@ -21,7 +22,7 @@ Transparent Color : Magenta
   bg_cells : EasyBg, 256x192, Pal : bg_cells_Pal, 7 tiles -> bg_cells_Tiles and bg_cells_Map
 
 5 palettes :
-  icone_Pal, 221 colors
+  icone_Pal, 239 colors
   classe_Pal, 67 colors
   ui_Pal, 2 colors
   bg_blanc_Pal, 2 colors

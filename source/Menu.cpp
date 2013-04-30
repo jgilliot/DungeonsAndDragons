@@ -36,8 +36,9 @@ void start_game(){
 
 reset_all();
 // LOAD BG !
-Hero * j=creation_hero();
-hero_principal=j;
+creation_hero();
+Hero * j=0;
+j=hero_principal;
 j->presentation();
 
 
@@ -70,9 +71,14 @@ reset_all();
 
 void start_adventure(){
 reset_all();
+PA_OutputText(1,0,0,"L'aventure commence...");
 PA_WaitForVBL();
-Hero * j = hero_principal; //cast en Hero !
-Labyrinthe * essai = new Labyrinthe(16,12);
+Hero * j = hero_principal;
+PA_OutputText(1,0,0,"Le Hero est bien cree ...");
+Labyrinthe * essai = new Labyrinthe(); // 16x12 max
+PA_WaitForVBL();
+PA_OutputText(1,0,0,"Le Labyrinthe est ok ...");
+PA_WaitForVBL();
 j->entrer_labyrinthe(*essai);
 
 Position * pMinimap = new Position(0,0);

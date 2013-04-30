@@ -13,7 +13,7 @@ if(strcmp(race,"Araignee")==0){
 	this->setIntelligenceBase(0+lvl);
 	this->setEnduranceBase(50+2*lvl);
 	this->setChanceBase(0+lvl);
-	this->setIcone(&icones[7]);
+	this->setIcone(&icones_mob[1]);
 	}
 else if(strcmp(race,"Gobelin")==0){
 	this->setRace("Gobelin");
@@ -22,7 +22,7 @@ else if(strcmp(race,"Gobelin")==0){
 	this->setIntelligenceBase(10+lvl);
 	this->setEnduranceBase(20+2*lvl);
 	this->setChanceBase(30+4*lvl);
-	this->setIcone(&icones[8]);
+	this->setIcone(&icones_mob[2]);
 }
 else{
 	this->setRace("Squelette");
@@ -31,7 +31,7 @@ else{
 	this->setIntelligenceBase(150+4*lvl);
 	this->setEnduranceBase(40+2*lvl);
 	this->setChanceBase(10);
-	this->setIcone(&icones[6]);
+	this->setIcone(&icones_mob[0]);
 	}
 
 if(strcmp(classe,"Archer")==0){

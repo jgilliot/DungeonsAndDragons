@@ -11,10 +11,10 @@ using namespace std;
 
 int Sprite::nbSprites=0;
 
-void * palettes[5] = {(void*)icone_Pal,(void*)icone_Pal,NULL,(void*)ui_Pal,(void*)classe_Pal};
+void * palettes[5] = {(void*)icone_Pal,(void*)icone_Pal,(void*)icone_Pal,(void*)ui_Pal,(void*)classe_Pal};
 void * joueurs_Sprite[3] = {(void*)icone_orc_Sprite,(void*)icone_humain_Sprite,(void*)icone_elfe_Sprite};
 void * mobs_Sprite[3] = {(void*)icone_gobelin_Sprite,(void*)icone_araignee_Sprite,(void*)icone_squelette_Sprite};
-//void * objets[] = {};
+void * objets_Sprite[1] = {(void*)icone_epee1_Sprite};
 void * classes_Sprite[3] = {(void*)classe_guerrier_Sprite,(void*)classe_archer_Sprite,(void*)classe_mage_Sprite};
 void * ui_Sprite[1] = {(void*)joueur_minimap_Sprite};
 
@@ -69,6 +69,9 @@ case 3:
 	break;
 case 4:
 	PA_CreateSprite(screen,nSprite,(void*)classes_Sprite[this->id],this->taille.tailleToInt()[0],this->taille.tailleToInt()[1],1,0,p.getX(),p.getY());
+	break;
+case 5:
+	PA_CreateSprite(screen,nSprite,(void*)objets_Sprite[this->id],this->taille.tailleToInt()[0],this->taille.tailleToInt()[1],1,0,p.getX(),p.getY());
 }
 }
 

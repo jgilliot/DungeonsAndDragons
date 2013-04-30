@@ -16,6 +16,7 @@ extern "C" {
 #include "icone_gobelin.c"
 #include "icone_araignee.c"
 #include "icone_squelette.c"
+#include "icone_epee1.c"
 #include "classe_guerrier.c"
 #include "classe_archer.c"
 #include "classe_mage.c"

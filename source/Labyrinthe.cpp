@@ -144,7 +144,8 @@ while(this->niveau[xdroite][j].getVisite()!=true || this->niveau[xgauche][j].get
 void Labyrinthe::modeler(){
 
 	// on crée les couloirs principaux !
-	this->creer_chemin(0,0,'s');
+	this->creer_chemin(0,0,'e');
+	this->niveau[1][0].setVoisin('o',this->niveau[0][0]);
 	
 	// on casse encore quelques murs !
 	for(int i=0;i<(this->getLargeur()*this->getHauteur()/2);i++){

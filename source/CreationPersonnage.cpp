@@ -11,7 +11,7 @@ using namespace std;
 
 //#######################################################################################
 
-Hero * creation_hero(){
+void creation_hero(){
 reset_all();
 char * nomClasse;
 int race = choix_race();
@@ -19,8 +19,6 @@ int classe = choix_classe();
 char * nom = choix_nom();
 
 reset_all();
-
-Hero * j;
 
 switch(classe){
 case 0: nomClasse = "Guerrier"; break;
@@ -30,13 +28,13 @@ default: nomClasse = "Default";
 }
 
 switch(race){
-case 0: j = new Hero(nom,nomClasse,"Orc"); break;
-case 1: j = new Hero(nom,nomClasse,"Humain"); break;
-case 2: j = new Hero(nom,nomClasse,"Elfe"); break;
-default: j = new Hero(nom,"Default","Paysan");
+case 0: hero_principal = new Hero(nom,nomClasse,"Orc"); break;
+case 1: hero_principal = new Hero(nom,nomClasse,"Humain"); break;
+case 2: hero_principal = new Hero(nom,nomClasse,"Elfe"); break;
+default: hero_principal = new Hero(nom,"Default","Paysan");
 }
 
-return j;
+//return j;
 }
 
 char * choix_nom(){
@@ -85,16 +83,12 @@ reset_all();
 int spritetouche=-1;
 int spritedejatouche=-1;
 
-Taille * t = new Taille(64,64);
-Sprite * icone_guerrier = new Sprite(4,0,*t);
-Sprite * icone_archer = new Sprite(4,1,*t);
-Sprite * icone_mage = new Sprite(4,2,*t);
 Position * p = new Position(16,64);
-icone_guerrier->affichage(0,0,*p);
+icones_classe[0].affichage(0,0,*p); // guerrier
 p->setPos(96,64);
-icone_archer->affichage(0,1,*p);
+icones_classe[1].affichage(0,1,*p); // archer
 p->setPos(176,64);
-icone_mage->affichage(0,2,*p);
+icones_classe[2].affichage(0,2,*p); // mage
 
 	while(1)
 	{	
@@ -135,11 +129,11 @@ int spritetouche=-1;
 int spritedejatouche=-1;
 
 Position * p = new Position(16,64);
-icones[0].affichage(0,0,*p);
+icones_race[0].affichage(0,0,*p);
 p->setPos(96,64);
-icones[1].affichage(0,1,*p);
+icones_race[1].affichage(0,1,*p);
 p->setPos(176,64);
-icones[2].affichage(0,2,*p);
+icones_race[2].affichage(0,2,*p);
 p->setPos(10,10);
 
 	while(1)
@@ -152,19 +146,19 @@ p->setPos(10,10);
 					switch(i){
 					case 0:
 						PA_ClearTextBg(1);
-						icones[0].affichage(1,0,*p);
+						icones_race[0].affichage(1,0,*p);
 						PA_OutputText(1,10,2,"ORC:");
 						PA_BoxText(1,3,12,29,23,descriptions[0],256);
 						break;
 					case 1:
 						PA_ClearTextBg(1);
-						icones[1].affichage(1,0,*p);
+						icones_race[1].affichage(1,0,*p);
 						PA_OutputText(1,10,2,"HUMAIN:");
 						PA_BoxText(1,3,12,29,23,descriptions[1],256);
 						break;
 					case 2:
 						PA_ClearTextBg(1);
-						icones[2].affichage(1,0,*p);
+						icones_race[2].affichage(1,0,*p);
 						PA_OutputText(1,10,2,"ELFE:");
 						PA_BoxText(1,3,12,29,23,descriptions[2],256);
 							}			

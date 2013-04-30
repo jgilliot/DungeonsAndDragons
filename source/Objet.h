@@ -1,21 +1,30 @@
+#ifndef OBJET_H
+#define OBJET_H
+
+#include "Sprite.h"
+#include "Effet.h"
 class Objet{
 public:
-virtual char * getClasse() =0;
-virtual char * getCaracteristique()=0;
+Objet(char * nom, char * classe, char * type, int lvl_min, int prix, bool consommable,Sprite * icone);
 
+Effet getEffet();
+char * getClasse();
 char * getNom();
 char * getType();
-int getLvlMinimum();
+int getLvl_minimum();
 int getValeur();
 
-void setNom(char * nom);
-void setType(char * type);
-void setLvlMinimum(int lvl);
-void setValeur(int valeur);
-
+bool est_consommable();
+Sprite * get_icone();
 private:
 char * nom;
+char * classe;
 char * type;
-int lvlminimum;
+Effet effet;
+Sprite * icone;
+
 int valeur;
+bool consommable;
+int lvl_min;
 };
+#endif
