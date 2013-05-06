@@ -1,4 +1,8 @@
 #include "Combattant.h"
+#include "Variables.h"
+#include "gfx/all_gfx.h"
+#include <PA9.h>
+
 using namespace std;
 
 int Combattant::getForceBase(){return this->forceBase;}
@@ -13,7 +17,7 @@ int Combattant::getHabilete(){return this->habilete;}
 int Combattant::getIntelligence(){return this->intelligence;}
 int Combattant::getEndurance(){return this->endurance;}
 int Combattant::getChance(){return this->chance;}
-
+int Combattant::getLvl(){return this->lvl;}
 char * Combattant::getClasse(){return this->classe;}
 void Combattant::setClasse(char * classe){this->classe=classe;}
 
@@ -49,6 +53,7 @@ void Combattant::setGold(int G){this->gold=G;}
 void Combattant::setXP(int xp){this->xp=xp;}
 void Combattant::setLvl(int lvl){this->lvl=lvl;}
 
+void Combattant::addVie(int vie){this->vie+=vie;}
 void Combattant::addForce(int For){this->force+=For;}
 void Combattant::addHabilete(int hab){this->habilete+=hab;}
 void Combattant::addIntelligence(int Int){this->intelligence+=Int;}
@@ -140,24 +145,38 @@ int Combattant::subit(int degats,char * classe){
 void Combattant::attaque(Combattant * ennemi){
 	int degats=this->getDegats();
 	int chance=PA_RandMinMax(1,200);
-	PA_OutputText(0,1,8,"                    ");
+	PA_OutputText(0,20,3,"%s                ",this->getNom());
+	PA_OutputText(0,14,8,"                    ");
 	if(chance<this->getChance()){
 		degats=degats*2;
-		PA_OutputText(0,1,8,"Coup Critique ! x2");
+		PA_OutputText(0,13,8,"Coup Critique ! x2");
 		}
 	int inflige=ennemi->subit(degats,this->getClasse());
-	PA_OutputText(0,1,9,"degats: %d   ",degats);
-	PA_OutputText(0,1,10,"degats infliges : %d   ",inflige);
-	PA_OutputText(0,1,11,"        ");
+	//PA_OutputText(0,13,9,"degats: %d   ",degats);
+	PA_OutputText(0,15,7,"Degats : %d   ",inflige);
+	PA_OutputText(0,15,11,"        ");
 	if(inflige==0){
 		if(strcmp(ennemi->getClasse(),"Guerrier")==0){
-			PA_OutputText(0,1,11,"Parade");}
+			PA_OutputText(0,15,11,"Parade !");}
 		if(strcmp(ennemi->getClasse(),"Archer")==0){
-			PA_OutputText(0,1,11,"Esquive");}
+			PA_OutputText(0,15,11,"Esquive !");}
 	}
 	
 }
 
+void Combattant::sort(Effet * sort,Combattant * ennemi){
+	Combattant * j;
+	j=this;
+	if(sort->getSelf()!=true){
+	j = ennemi;
+	}
+	j->addVie(sort->getBonus_pv());
+	j->addForce(sort->getBonus_force());
+	j->addHabilete(sort->getBonus_habilete());
+	j->addIntelligence(sort->getBonus_intelligence());
+	j->addEndurance(sort->getBonus_endurance());
+	j->addChance(sort->getBonus_chance());
+}
 // faire fonction coup critique qui renvoie booléen (50% max)
 
 bool Combattant::est_mort(){
@@ -168,54 +187,96 @@ return false;
 
 void Combattant::combattre(Combattant ennemi){
 	reset_all();
-	Position * p1 = new Position(10,10);
-	Position * p2 = new Position(182,10);
+	Position * p1 = new Position(30,15);
+	Position * p2 = new Position(160,15);
+	
+	
+	// UTILISER LA CLASSE BACKGROUND ?
+	PA_EasyBgLoad(1,1,bg_combat_top);
+	PA_EasyBgLoad(0,1,bg_combat_bot);
+	
+	//PA_LoadSpritePal(0,1,(void*)ui_Pal);
+	//PA_CreateSprite(0,0,(void*)bouton_attaque_Sprite,1,3,1,1,0,0);
+	
+	Sprite * bouton_attaque = &icones_ui[0];
+	Sprite * bouton_objet = &icones_ui[1];
+	Sprite * bouton_sort = &icones_ui[2];
+	Sprite * bouton_passer = &icones_ui[3];
+	Sprite * bouton_fuite = &icones_ui[4];
+	
+	bouton_attaque->affichage(0,0,*(new Position(20,20)));
+	bouton_sort->affichage(0,1,*(new Position(20,60)));
+	bouton_objet->affichage(0,2,*(new Position(20,100)));
+	bouton_passer->affichage(0,3,*(new Position(115,140)));
+	bouton_fuite->affichage(0,4,*(new Position(185,140)));
+	//s->affichage(0,0,*(new Position(20,60)));
 	
 	this->getIcone()->affichage(1,0,*p1);
-	PA_OutputText(1,1,10,"%s",this->getRace());
-	PA_OutputText(1,1,11,"%s",this->getClasse());
-	PA_OutputText(1,1,12,"%03d/%03d",this->getVie(),this->getVieMax());
-	PA_OutputText(1,1,14,"F:%d",this->getForce()); // faire une icone dans variables ! class Stats , static icone_Force , static ...
-	PA_OutputText(1,1,15,"H:%d",this->getHabilete());
-	PA_OutputText(1,1,16,"I:%d",this->getIntelligence());
+	PA_OutputText(1,4,10,"%s",this->getRace());
+	PA_OutputText(1,4,11,"%s",this->getClasse());
+	PA_OutputText(1,4,12,"%03d/%03d",this->getVie(),this->getVieMax());
+	PA_OutputText(1,4,14,"F:%d",this->getForce()); // faire une icone dans variables ! class Stats , static icone_Force , static ...
+	PA_OutputText(1,4,15,"H:%d",this->getHabilete());
+	PA_OutputText(1,4,16,"I:%d",this->getIntelligence());
+	PA_OutputText(1,4,18,"Lvl:%d",this->getLvl());
 	
 	ennemi.getIcone()->affichage(1,1,*p2);
-	PA_OutputText(1,23,10,"%s",ennemi.getRace());
-	PA_OutputText(1,23,11,"%s",ennemi.getClasse());
-	PA_OutputText(1,23,12,"%03d/%03d",ennemi.getVie(),ennemi.getVieMax());
-	PA_OutputText(1,23,14,"F:%d",ennemi.getForce());
-	PA_OutputText(1,23,15,"H:%d",ennemi.getHabilete());
-	PA_OutputText(1,23,16,"I:%d",ennemi.getIntelligence());
+	PA_OutputText(1,20,10,"%s",ennemi.getRace());
+	PA_OutputText(1,20,11,"%s",ennemi.getClasse());
+	PA_OutputText(1,20,12,"%03d/%03d",ennemi.getVie(),ennemi.getVieMax());
+	PA_OutputText(1,20,14,"F:%d",ennemi.getForce());
+	PA_OutputText(1,20,15,"H:%d",ennemi.getHabilete());
+	PA_OutputText(1,20,16,"I:%d",ennemi.getIntelligence());
+	PA_OutputText(1,20,18,"Lvl:%d",ennemi.getLvl());
 	
 	int tour=0;
 	Combattant * attaquant;
 	Combattant * victime;
-	while(1){
-		if(tour%2==0){
-			attaquant=this;
-			victime=&ennemi;
-		}
-		else{
-			victime=this;
-			attaquant=&ennemi;
-		}
-		
-		attaquant->attaque(victime);
-		
-		PA_OutputText(1,23,12,"%03d/%03d",ennemi.getVie(),ennemi.getVieMax());
-		PA_OutputText(1,1,12,"%03d/%03d",this->getVie(),this->getVieMax());
-		
-		if(victime->est_mort())
-			break;
-		sleep(2);
-		tour++;
-	}
 	
-	if(ennemi.est_mort())
-	{
+	int spritedejatouche=-1;
+	int spritetouche=-2;
+	while(1){
+	
+		for (int i = 0; i < 4; i++) {
+			if (PA_SpriteTouched(i) && Stylus.Newpress) 
+			{
+					spritedejatouche=spritetouche;
+					spritetouche=i;
+			}			
+			if (spritedejatouche==spritetouche){
+				switch(i){
+					case 0:
+						this->attaque(&ennemi);
+						break;
+					case 1:
+						//fonction objet
+						break;
+					case 2:
+						//fonction sort
+						break;
+					case 3:
+						// fonction passer
+						break;
+					case 4:
+						// fonction fuite
+						break;
+						}
+				sleep(2);
+				ennemi.attaque(this);
+				spritedejatouche=-1;
+				spritetouche=-2;
+			}
+		}
+	PA_OutputText(1,4,12,"%03d/%03d",this->getVie(),this->getVieMax());
+	PA_OutputText(1,20,12,"%03d/%03d",ennemi.getVie(),ennemi.getVieMax());
+	
+	if(ennemi.est_mort()){
+		//fonction continuer 
 		PA_OutputText(0,10,3,"Bien joue");
 	}
-	else
+	if(this->est_mort()){
+		//fonction game over
 		PA_OutputText(0,10,3,"Game Over.");
-	
+	}
+	}
 }

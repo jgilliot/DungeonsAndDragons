@@ -6,6 +6,7 @@
 #include <time.h>
 #include "Joueur.h"
 #include "Utils.h"
+#include "Effet.h"
 #include <math.h>
 
 using namespace std;
@@ -26,6 +27,7 @@ int getIntelligenceBase();
 int getEnduranceBase();
 int getChanceBase();
 int getDefenseBase();
+int getLvl();
 
 //variables actuelles (objets + buffs/debuffs)
 int getVie();
@@ -64,6 +66,7 @@ void setXP(int xp);
 void setLvl(int lvl);
 
 // Incrément variables
+void addVie(int vie);
 void addForce(int For);
 void addHabilete(int hab);
 void addIntelligence(int Int);
@@ -81,10 +84,10 @@ void addLvl(int lvl);
 // renvoie les pv de l'adversaire
 void attaque(Combattant * ennemi);
 int subit(int degats,char * classe);
+void sort(Effet * sort, Combattant * ennemi);
 bool est_mort();
 
 void combattre(Combattant ennemi);
-
 private:
 
 char * classe;

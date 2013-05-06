@@ -1,4 +1,4 @@
 //Palette created using Mollusk's PAGfxConverter
 
-const unsigned short ui_Pal[2] __attribute__ ((aligned (4))) = {
-64543, 36989};
+const unsigned short ui_Pal[34] __attribute__ ((aligned (4))) = {
+64543, 36989, 60250, 58136, 59193, 57079, 50737, 49680, 53908, 52851, 51794, 47566, 54965, 63421, 61307, 56022, 64478, 65535, 62364, 48623, 46509, 32768, 34882, 40167, 39110, 33825, 44395, 42281, 36996, 45452, 35939, 38053, 41224, 43338};

@@ -8,6 +8,7 @@ Sprite icones_race[3];
 Sprite icones_classe[3];
 Sprite icones_mob[4];
 Sprite icones_arme[1];
+Sprite icones_ui[5];
 char * noms_mob[5];
 
 // objets
@@ -36,6 +37,13 @@ icones_mob[3] = *(new Sprite(1,0,*new Taille(64,64))); //dragon
 
 //objets
 icones_arme[0] = *(new Sprite(5,0,*new Taille(32,32))); // epee1
+
+//ui
+icones_ui[0] = *(new Sprite(3,1,*new Taille(32,64))); // bouton d'attaque
+icones_ui[1] = *(new Sprite(3,2,*new Taille(32,64))); // bouton objet
+icones_ui[2] = *(new Sprite(3,3,*new Taille(32,64))); // bouton sort
+icones_ui[3] = *(new Sprite(3,4,*new Taille(32,64))); // bouton passer
+icones_ui[4] = *(new Sprite(3,5,*new Taille(32,64))); // bouton fuite
 
 // DESCRIPTIONS 
 

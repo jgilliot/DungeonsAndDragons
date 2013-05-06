@@ -16,7 +16,7 @@ void * joueurs_Sprite[3] = {(void*)icone_orc_Sprite,(void*)icone_humain_Sprite,(
 void * mobs_Sprite[3] = {(void*)icone_gobelin_Sprite,(void*)icone_araignee_Sprite,(void*)icone_squelette_Sprite};
 void * objets_Sprite[1] = {(void*)icone_epee1_Sprite};
 void * classes_Sprite[3] = {(void*)classe_guerrier_Sprite,(void*)classe_archer_Sprite,(void*)classe_mage_Sprite};
-void * ui_Sprite[1] = {(void*)joueur_minimap_Sprite};
+void * ui_Sprite[6] = {(void*)joueur_minimap_Sprite,(void*)bouton_attaque_Sprite,(void*)bouton_objet_Sprite,(void*)bouton_sort_Sprite,(void*)bouton_passer_Sprite,(void*)bouton_fuite_Sprite};
 
 Sprite::Sprite(){
 id = 0;

@@ -29,6 +29,11 @@ extern const unsigned char classe_guerrier_Sprite[4096] __attribute__ ((aligned 
 extern const unsigned char classe_archer_Sprite[4096] __attribute__ ((aligned (4))) ;  // Pal : classe_Pal
 extern const unsigned char classe_mage_Sprite[4096] __attribute__ ((aligned (4))) ;  // Pal : classe_Pal
 extern const unsigned char joueur_minimap_Sprite[64] __attribute__ ((aligned (4))) ;  // Pal : ui_Pal
+extern const unsigned char bouton_attaque_Sprite[2048] __attribute__ ((aligned (4))) ;  // Pal : ui_Pal
+extern const unsigned char bouton_sort_Sprite[2048] __attribute__ ((aligned (4))) ;  // Pal : ui_Pal
+extern const unsigned char bouton_objet_Sprite[2048] __attribute__ ((aligned (4))) ;  // Pal : ui_Pal
+extern const unsigned char bouton_passer_Sprite[2048] __attribute__ ((aligned (4))) ;  // Pal : ui_Pal
+extern const unsigned char bouton_fuite_Sprite[2048] __attribute__ ((aligned (4))) ;  // Pal : ui_Pal
 
 // Background files : 
 extern const int bg_blanc_Info[3]; // BgMode, Width, Height
@@ -41,13 +46,25 @@ extern const unsigned short bg_cells_Map[768] __attribute__ ((aligned (4))) ;  /
 extern const unsigned char bg_cells_Tiles[448] __attribute__ ((aligned (4))) ;  // Pal : bg_cells_Pal
 extern PAGfx_struct bg_cells; // background pointer
 
+extern const int bg_combat_bot_Info[3]; // BgMode, Width, Height
+extern const unsigned short bg_combat_bot_Map[768] __attribute__ ((aligned (4))) ;  // Pal : bg_combat_bot_Pal
+extern const unsigned char bg_combat_bot_Tiles[1664] __attribute__ ((aligned (4))) ;  // Pal : bg_combat_bot_Pal
+extern PAGfx_struct bg_combat_bot; // background pointer
+
+extern const int bg_combat_top_Info[3]; // BgMode, Width, Height
+extern const unsigned short bg_combat_top_Map[768] __attribute__ ((aligned (4))) ;  // Pal : bg_combat_top_Pal
+extern const unsigned char bg_combat_top_Tiles[1792] __attribute__ ((aligned (4))) ;  // Pal : bg_combat_top_Pal
+extern PAGfx_struct bg_combat_top; // background pointer
+
 
 // Palette files : 
 extern const unsigned short icone_Pal[239] __attribute__ ((aligned (4))) ;
 extern const unsigned short classe_Pal[67] __attribute__ ((aligned (4))) ;
-extern const unsigned short ui_Pal[2] __attribute__ ((aligned (4))) ;
+extern const unsigned short ui_Pal[34] __attribute__ ((aligned (4))) ;
 extern const unsigned short bg_blanc_Pal[2] __attribute__ ((aligned (4))) ;
 extern const unsigned short bg_cells_Pal[4] __attribute__ ((aligned (4))) ;
+extern const unsigned short bg_combat_bot_Pal[5] __attribute__ ((aligned (4))) ;
+extern const unsigned short bg_combat_top_Pal[3] __attribute__ ((aligned (4))) ;
 
 
 #endif

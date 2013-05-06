@@ -19,18 +19,27 @@ PA_InitVBL();
 PAPI_Init(0); // Init the API on the bottom screen
 PA_InitText(1,0);
 PA_InitText(0,0);
+init_variables();
 
+Hero * j = new Hero("Gneuh","Archer","Orc");
+Mob * squelette = new Mob("Leoric","Squelette","Mage",1);
+Mob * gobelin = new Mob("GobGob","Gobelin","Archer",2);
+Mob * araignee = new Mob("Aracnei","Araignee","Guerrier",3);
+
+j->combattre(*squelette);
+j->combattre(*gobelin);
+j->combattre(*araignee);
 
 //Labyrinthe * l = new Labyrinthe();
 
-init_variables(); // initialisation des variables globales
+ // initialisation des variables globales
 
 //display_menu();
 
-Effet * soin = new Effet("Heal",0,50,0,0,0,0,0,0,0);
+/*Effet * soin = new Effet("Heal",true,999,0,50,0,0,0,0,0,0,0);
 Sprite * sprite1 = new Sprite(5,0,*(new Taille(32,32)));
 Objet * epee1 = new Objet("Epee 1","Guerrier","Arme",0,15,false,sprite1);
-epee1->get_icone()->affichage(0,0,*(new Position(10,10)));
+epee1->get_icone()->affichage(0,0,*(new Position(10,10)));*/
 
 //j->combattre(*m);
 while(1){
