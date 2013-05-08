@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="88">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="DungeonsAndDragons">
+      <df name="source">
+        <df name="gfx">
+          <in>UI.pal.c</in>
+          <in>all_gfx.c</in>
+          <in>all_gfx.h</in>
+          <in>bg_blanc.c</in>
+          <in>bg_blanc.pal.c</in>
+          <in>bg_cells.c</in>
+          <in>bg_cells.pal.c</in>
+          <in>bg_combat_bot.c</in>
+          <in>bg_combat_bot.pal.c</in>
+          <in>bg_combat_top.c</in>
+          <in>bg_combat_top.pal.c</in>
+          <in>bouton_attaque.c</in>
+          <in>bouton_fuite.c</in>
+          <in>bouton_objet.c</in>
+          <in>bouton_passer.c</in>
+          <in>bouton_sort.c</in>
+          <in>classe.pal.c</in>
+          <in>classe_archer.c</in>
+          <in>classe_guerrier.c</in>
+          <in>classe_mage.c</in>
+          <in>icone.pal.c</in>
+          <in>icone_araignee.c</in>
+          <in>icone_elfe.c</in>
+          <in>icone_epee1.c</in>
+          <in>icone_gobelin.c</in>
+          <in>icone_humain.c</in>
+          <in>icone_orc.c</in>
+          <in>icone_squelette.c</in>
+          <in>joueur_minimap.c</in>
+        </df>
+        <in>Background.cpp</in>
+        <in>Background.h</in>
+        <in>Combattant.cpp</in>
+        <in>Combattant.h</in>
+        <in>CreationPersonnage.cpp</in>
+        <in>CreationPersonnage.h</in>
+        <in>Effet.cpp</in>
+        <in>Effet.h</in>
+        <in>Explorateur.cpp</in>
+        <in>Explorateur.h</in>
+        <in>Hero.cpp</in>
+        <in>Hero.h</in>
+        <in>Inventaire.cpp</in>
+        <in>Inventaire.h</in>
+        <in>Joueur.cpp</in>
+        <in>Joueur.h</in>
+        <in>Labyrinthe.cpp</in>
+        <in>Labyrinthe.h</in>
+        <in>Main.cpp</in>
+        <in>Main.h</in>
+        <in>Menu.cpp</in>
+        <in>Menu.h</in>
+        <in>Mob.cpp</in>
+        <in>Mob.h</in>
+        <in>Objet.cpp</in>
+        <in>Objet.h</in>
+        <in>Piece.cpp</in>
+        <in>Piece.h</in>
+        <in>Position.cpp</in>
+        <in>Position.h</in>
+        <in>Sprite.cpp</in>
+        <in>Sprite.h</in>
+        <in>Taille.cpp</in>
+        <in>Taille.h</in>
+        <in>Utils.cpp</in>
+        <in>Utils.h</in>
+        <in>Variables.cpp</in>
+        <in>Variables.h</in>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath>launcher\DeSmuME_x64.exe</executablePath>
+          <ccTool>
+            <incDir>
+              <pElem>source</pElem>
+            </incDir>
+          </ccTool>
+        </makeTool>
+      </makefileType>
+      <item path="source/Background.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool>
+          <incDir>
+            <pElem>../../../../devkitpro/palib/lib/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include</pElem>
+            <pElem>source/gfx</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include/sys</pElem>
+            <pElem>../../../../devkitpro/devkitARM/lib/gcc/arm-eabi/4.1.2/include</pElem>
+            <pElem>../../../../devkitpro/palib/lib/include/nds</pElem>
+            <pElem>../../../../devkitpro/libnds/include</pElem>
+            <pElem>c:/Users/Gneuh/Documents/DungeonsAndDragons/build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="source/Background.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/Combattant.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool>
+          <incDir>
+            <pElem>../../../../devkitpro/palib/lib/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/arm-eabi/bits</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2</pElem>
+            <pElem>../../../../devkitpro/devkitARM/lib/gcc/arm-eabi/4.1.2/include</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include/sys</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/bits</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/palib/lib/include/nds</pElem>
+            <pElem>source/gfx</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/arm-eabi</pElem>
+            <pElem>../../../../devkitpro/libnds/include</pElem>
+            <pElem>c:/Users/Gneuh/Documents/DungeonsAndDragons/build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="source/Combattant.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/CreationPersonnage.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool>
+          <incDir>
+            <pElem>../../../../devkitpro/palib/lib/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/arm-eabi/bits</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2</pElem>
+            <pElem>../../../../devkitpro/devkitARM/lib/gcc/arm-eabi/4.1.2/include</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include/sys</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/bits</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/palib/lib/include/nds</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/arm-eabi</pElem>
+            <pElem>../../../../devkitpro/libnds/include</pElem>
+            <pElem>c:/Users/Gneuh/Documents/DungeonsAndDragons/build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="source/CreationPersonnage.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/Effet.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool>
+          <incDir>
+            <pElem>c:/Users/Gneuh/Documents/DungeonsAndDragons/build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="source/Effet.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/Explorateur.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool>
+          <incDir>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/arm-eabi/bits</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2</pElem>
+            <pElem>../../../../devkitpro/devkitARM/lib/gcc/arm-eabi/4.1.2/include</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include/sys</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/bits</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds</pElem>
+            <pElem>../../../../devkitpro/palib/lib/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/palib/lib/include/nds</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/arm-eabi</pElem>
+            <pElem>../../../../devkitpro/libnds/include</pElem>
+            <pElem>c:/Users/Gneuh/Documents/DungeonsAndDragons/build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="source/Explorateur.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/Hero.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool>
+          <incDir>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/arm-eabi/bits</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2</pElem>
+            <pElem>../../../../devkitpro/devkitARM/lib/gcc/arm-eabi/4.1.2/include</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include/sys</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/bits</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds</pElem>
+            <pElem>../../../../devkitpro/palib/lib/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/palib/lib/include/nds</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/arm-eabi</pElem>
+            <pElem>../../../../devkitpro/libnds/include</pElem>
+            <pElem>c:/Users/Gneuh/Documents/DungeonsAndDragons/build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="source/Hero.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/Inventaire.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool>
+          <incDir>
+            <pElem>../../../../devkitpro/libnds/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include</pElem>
+            <pElem>../../../../devkitpro/palib/lib/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include/sys</pElem>
+            <pElem>../../../../devkitpro/devkitARM/lib/gcc/arm-eabi/4.1.2/include</pElem>
+            <pElem>../../../../devkitpro/palib/lib/include/nds</pElem>
+            <pElem>../../../../devkitpro/libnds/include</pElem>
+            <pElem>c:/Users/Gneuh/Documents/DungeonsAndDragons/build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="source/Inventaire.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/Joueur.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool>
+          <incDir>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2</pElem>
+            <pElem>../../../../devkitpro/devkitARM/lib/gcc/arm-eabi/4.1.2/include</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include/sys</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/arm-eabi/bits</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/bits</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds</pElem>
+            <pElem>../../../../devkitpro/palib/lib/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/palib/lib/include/nds</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/arm-eabi</pElem>
+            <pElem>../../../../devkitpro/libnds/include</pElem>
+            <pElem>c:/Users/Gneuh/Documents/DungeonsAndDragons/build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="source/Joueur.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/Labyrinthe.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool>
+          <incDir>
+            <pElem>../../../../devkitpro/palib/lib/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/arm-eabi/bits</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2</pElem>
+            <pElem>../../../../devkitpro/devkitARM/lib/gcc/arm-eabi/4.1.2/include</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include/sys</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/bits</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/palib/lib/include/nds</pElem>
+            <pElem>source/gfx</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/arm-eabi</pElem>
+            <pElem>../../../../devkitpro/libnds/include</pElem>
+            <pElem>c:/Users/Gneuh/Documents/DungeonsAndDragons/build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="source/Labyrinthe.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/Main.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool>
+          <incDir>
+            <pElem>../../../../devkitpro/palib/lib/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/arm-eabi/bits</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2</pElem>
+            <pElem>../../../../devkitpro/devkitARM/lib/gcc/arm-eabi/4.1.2/include</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include/sys</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/bits</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/palib/lib/include/nds</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/arm-eabi</pElem>
+            <pElem>../../../../devkitpro/libnds/include</pElem>
+            <pElem>c:/Users/Gneuh/Documents/DungeonsAndDragons/build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="source/Main.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/Menu.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool>
+          <incDir>
+            <pElem>../../../../devkitpro/palib/lib/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/arm-eabi/bits</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2</pElem>
+            <pElem>../../../../devkitpro/devkitARM/lib/gcc/arm-eabi/4.1.2/include</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include/sys</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/bits</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/palib/lib/include/nds</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/arm-eabi</pElem>
+            <pElem>../../../../devkitpro/libnds/include</pElem>
+            <pElem>c:/Users/Gneuh/Documents/DungeonsAndDragons/build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="source/Menu.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/Mob.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool>
+          <incDir>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/arm-eabi/bits</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2</pElem>
+            <pElem>../../../../devkitpro/devkitARM/lib/gcc/arm-eabi/4.1.2/include</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include/sys</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/bits</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds</pElem>
+            <pElem>../../../../devkitpro/palib/lib/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/palib/lib/include/nds</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/arm-eabi</pElem>
+            <pElem>../../../../devkitpro/libnds/include</pElem>
+            <pElem>c:/Users/Gneuh/Documents/DungeonsAndDragons/build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="source/Mob.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/Objet.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool>
+          <incDir>
+            <pElem>../../../../devkitpro/libnds/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include</pElem>
+            <pElem>../../../../devkitpro/palib/lib/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include/sys</pElem>
+            <pElem>../../../../devkitpro/devkitARM/lib/gcc/arm-eabi/4.1.2/include</pElem>
+            <pElem>../../../../devkitpro/palib/lib/include/nds</pElem>
+            <pElem>../../../../devkitpro/libnds/include</pElem>
+            <pElem>c:/Users/Gneuh/Documents/DungeonsAndDragons/build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="source/Objet.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/Piece.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool>
+          <incDir>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/arm-eabi/bits</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2</pElem>
+            <pElem>../../../../devkitpro/devkitARM/lib/gcc/arm-eabi/4.1.2/include</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include/sys</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/bits</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds</pElem>
+            <pElem>../../../../devkitpro/palib/lib/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/palib/lib/include/nds</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/arm-eabi</pElem>
+            <pElem>../../../../devkitpro/libnds/include</pElem>
+            <pElem>c:/Users/Gneuh/Documents/DungeonsAndDragons/build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="source/Piece.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/Position.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool>
+          <incDir>
+            <pElem>c:/Users/Gneuh/Documents/DungeonsAndDragons/build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="source/Position.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/Sprite.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool>
+          <incDir>
+            <pElem>../../../../devkitpro/palib/lib/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include/sys</pElem>
+            <pElem>../../../../devkitpro/devkitARM/lib/gcc/arm-eabi/4.1.2/include</pElem>
+            <pElem>../../../../devkitpro/palib/lib/include/nds</pElem>
+            <pElem>source/gfx</pElem>
+            <pElem>../../../../devkitpro/libnds/include</pElem>
+            <pElem>c:/Users/Gneuh/Documents/DungeonsAndDragons/build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="source/Sprite.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/Taille.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool>
+          <incDir>
+            <pElem>c:/Users/Gneuh/Documents/DungeonsAndDragons/build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="source/Taille.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/Utils.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool>
+          <incDir>
+            <pElem>../../../../devkitpro/palib/lib/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include/sys</pElem>
+            <pElem>../../../../devkitpro/devkitARM/lib/gcc/arm-eabi/4.1.2/include</pElem>
+            <pElem>../../../../devkitpro/palib/lib/include/nds</pElem>
+            <pElem>../../../../devkitpro/libnds/include</pElem>
+            <pElem>c:/Users/Gneuh/Documents/DungeonsAndDragons/build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="source/Utils.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/Variables.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool>
+          <incDir>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/arm-eabi/bits</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2</pElem>
+            <pElem>../../../../devkitpro/devkitARM/lib/gcc/arm-eabi/4.1.2/include</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include</pElem>
+            <pElem>../../../../devkitpro/devkitARM/arm-eabi/include/sys</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/bits</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/libnds/include/nds</pElem>
+            <pElem>../../../../devkitpro/palib/lib/include/nds/arm9</pElem>
+            <pElem>../../../../devkitpro/palib/lib/include/nds</pElem>
+            <pElem>../../../../devkitpro/devkitARM/include/c++/4.1.2/arm-eabi</pElem>
+            <pElem>../../../../devkitpro/libnds/include</pElem>
+            <pElem>c:/Users/Gneuh/Documents/DungeonsAndDragons/build</pElem>
+          </incDir>
+        </ccTool>
+      </item>
+      <item path="source/Variables.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/UI.pal.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/all_gfx.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/all_gfx.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/bg_blanc.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/bg_blanc.pal.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/bg_cells.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/bg_cells.pal.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/bg_combat_bot.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/bg_combat_bot.pal.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/bg_combat_top.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/bg_combat_top.pal.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/bouton_attaque.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/bouton_fuite.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/bouton_objet.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/bouton_passer.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/bouton_sort.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/classe.pal.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/classe_archer.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/classe_guerrier.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/classe_mage.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/icone.pal.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/icone_araignee.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/icone_elfe.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/icone_epee1.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/icone_gobelin.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/icone_humain.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/icone_orc.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/icone_squelette.c" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gfx/joueur_minimap.c" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

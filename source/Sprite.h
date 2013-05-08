@@ -30,16 +30,18 @@ void setRotation(int angle);
 
 
 static int nbSprites;
+static int Sprite_touche(int sprite1,int sprite2);
+static int Sprite_double_touche(int sprite1,int sprite2);
 
 private:
 
-int id; // numéro de ligne
-int type; // Palette commune pour les même types : icone/objets/sorts/carte/effets attaque 
-		  // numéro colonne sprite + case palettes.
-bool affiche; // vrai si affiché
+int id; // numï¿½ro de ligne
+int type; // Palette commune pour les mï¿½me types : icone/objets/sorts/carte/effets attaque 
+		  // numï¿½ro colonne sprite + case palettes.
+bool affiche; // vrai si affichï¿½
 int screen; // numero ecran
 int nSprite; // numero du Sprite
-Position * p; // position ou le sprite est affiché
+Position * p; // position ou le sprite est affichï¿½
 Taille taille;
 };
 

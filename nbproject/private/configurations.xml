@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="88">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="DungeonsAndDragons">
+      <df name="build">
+      </df>
+      <df name="lalala">
+      </df>
+      <df name="launcher">
+        <df name="Battery">
+        </df>
+        <df name="Cheats">
+        </df>
+        <df name="States">
+        </df>
+      </df>
+      <df name="source">
+        <df name="gfx">
+          <df name="bin">
+          </df>
+          <in>UI.pal.c</in>
+          <in>all_gfx.c</in>
+          <in>all_gfx.h</in>
+          <in>bg_blanc.c</in>
+          <in>bg_blanc.pal.c</in>
+          <in>bg_cells.c</in>
+          <in>bg_cells.pal.c</in>
+          <in>bg_combat_bot.c</in>
+          <in>bg_combat_bot.pal.c</in>
+          <in>bg_combat_top.c</in>
+          <in>bg_combat_top.pal.c</in>
+          <in>bouton_attaque.c</in>
+          <in>bouton_fuite.c</in>
+          <in>bouton_objet.c</in>
+          <in>bouton_passer.c</in>
+          <in>bouton_sort.c</in>
+          <in>cell.pal.c</in>
+          <in>classe.pal.c</in>
+          <in>classe_archer.c</in>
+          <in>classe_guerrier.c</in>
+          <in>classe_mage.c</in>
+          <in>icone.pal.c</in>
+          <in>icone_araignee.c</in>
+          <in>icone_elfe.c</in>
+          <in>icone_epee1.c</in>
+          <in>icone_gobelin.c</in>
+          <in>icone_humain.c</in>
+          <in>icone_null.c</in>
+          <in>icone_orc.c</in>
+          <in>icone_squelette.c</in>
+          <in>joueur_minimap.c</in>
+          <in>mob.pal.c</in>
+        </df>
+        <in>Background.cpp</in>
+        <in>Background.h</in>
+        <in>Combattant.cpp</in>
+        <in>Combattant.h</in>
+        <in>CreationPersonnage.cpp</in>
+        <in>CreationPersonnage.h</in>
+        <in>Effet.cpp</in>
+        <in>Effet.h</in>
+        <in>Explorateur.cpp</in>
+        <in>Explorateur.h</in>
+        <in>Hero.cpp</in>
+        <in>Hero.h</in>
+        <in>Inventaire.cpp</in>
+        <in>Inventaire.h</in>
+        <in>Joueur.cpp</in>
+        <in>Joueur.h</in>
+        <in>Labyrinthe.cpp</in>
+        <in>Labyrinthe.h</in>
+        <in>Main.cpp</in>
+        <in>Main.h</in>
+        <in>Menu.cpp</in>
+        <in>Menu.h</in>
+        <in>Mob.cpp</in>
+        <in>Mob.h</in>
+        <in>Objet.cpp</in>
+        <in>Objet.h</in>
+        <in>Piece.cpp</in>
+        <in>Piece.h</in>
+        <in>Position.cpp</in>
+        <in>Position.h</in>
+        <in>Sprite.cpp</in>
+        <in>Sprite.h</in>
+        <in>Taille.cpp</in>
+        <in>Taille.h</in>
+        <in>Utils.cpp</in>
+        <in>Utils.h</in>
+        <in>Variables.cpp</in>
+        <in>Variables.h</in>
+        <in>Village.cpp</in>
+      </df>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>3</platform>
+      </toolsSet>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>true</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

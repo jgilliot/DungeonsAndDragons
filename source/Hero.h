@@ -7,6 +7,8 @@
 class Hero: public Combattant, public Explorateur{
 public:
 Hero(char * nom, char * classe , char * race);
+
+void presentation();
 };
 
 extern Hero * hero_principal;

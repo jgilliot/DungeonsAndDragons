@@ -25,6 +25,7 @@ extern const unsigned char icone_gobelin_Sprite[4096] __attribute__ ((aligned (4
 extern const unsigned char icone_araignee_Sprite[4096] __attribute__ ((aligned (4))) ;  // Pal : icone_Pal
 extern const unsigned char icone_squelette_Sprite[4096] __attribute__ ((aligned (4))) ;  // Pal : icone_Pal
 extern const unsigned char icone_epee1_Sprite[1024] __attribute__ ((aligned (4))) ;  // Pal : icone_Pal
+extern const unsigned char icone_null_Sprite[1024] __attribute__ ((aligned (4))) ;  // Pal : icone_Pal
 extern const unsigned char classe_guerrier_Sprite[4096] __attribute__ ((aligned (4))) ;  // Pal : classe_Pal
 extern const unsigned char classe_archer_Sprite[4096] __attribute__ ((aligned (4))) ;  // Pal : classe_Pal
 extern const unsigned char classe_mage_Sprite[4096] __attribute__ ((aligned (4))) ;  // Pal : classe_Pal

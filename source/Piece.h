@@ -4,11 +4,10 @@
 #include "Position.h"
 #include "Mob.h"
 
-
 class Piece{
 public:
 Piece();
-Piece(int x,int y);
+Piece(int x,int y,int lvl);
 
 int getPosX();
 int getPosY();
@@ -29,14 +28,17 @@ int getCoinBG();
 int getCoinHD();
 int getCoinBD();
 
+Mob * getEnnemi();
+bool est_envahie();
 //void ajouterMonstre(Mob * monstre);
 private:
 Position position_piece;
-bool visite; // 0 si non visité - 1 si visité
+bool visite; // 0 si non visitï¿½ - 1 si visitï¿½
 
 //struct Objet items[C_TAILLE_INV];
 
-Combattant * ennemi;
+bool envahie;
+Mob * ennemi;
 Piece * n;
 Piece * e;
 Piece * s;

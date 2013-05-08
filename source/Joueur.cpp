@@ -16,13 +16,7 @@ void Joueur::presentation(){
 Position * p = new Position(10,10);
 this->getIcone()->affichage(1,0,*p);
 PA_OutputText(1,10,2,"Nom : %s",this->getNom());
-PA_OutputText(1,10,3,"Race : %s",this->getRace());
-//PA_OutputText(1,10,4,"Classe : %s",this->getClasse());
-/*PA_OutputText(1,1,10,"Force : %d",this->getForce());
-PA_OutputText(1,1,12,"Habilete : %d",this->getHabilete());
-PA_OutputText(1,1,11,"Intelligence : %d",this->getIntelligence());
-PA_OutputText(1,1,13,"Endurance : %d",this->getEndurance());
-PA_OutputText(1,1,14,"Chance : %d",this->getChance());*/
+PA_OutputText(1,10,4,"Race : %s",this->getRace());
 }
 
 Joueur::Joueur(){

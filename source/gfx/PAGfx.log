@@ -4,7 +4,7 @@ If you have suggestions, problems, or anything, please mail me at mollusk@palib.
 Converting PAGfx.ini
 Transparent Color : Magenta
 
-16 sprites :
+17 sprites :
   icone_orc : 256colors, 64x64, Pal : icone_Pal, -> icone_orc_Sprite
   icone_humain : 256colors, 64x64, Pal : icone_Pal, -> icone_humain_Sprite
   icone_elfe : 256colors, 64x64, Pal : icone_Pal, -> icone_elfe_Sprite
@@ -12,6 +12,7 @@ Transparent Color : Magenta
   icone_araignee : 256colors, 64x64, Pal : icone_Pal, -> icone_araignee_Sprite
   icone_squelette : 256colors, 64x64, Pal : icone_Pal, -> icone_squelette_Sprite
   icone_epee1 : 256colors, 32x32, Pal : icone_Pal, -> icone_epee1_Sprite
+  icone_null : 256colors, 32x32, Pal : icone_Pal, -> icone_null_Sprite
   classe_guerrier : 256colors, 64x64, Pal : classe_Pal, -> classe_guerrier_Sprite
   classe_archer : 256colors, 64x64, Pal : classe_Pal, -> classe_archer_Sprite
   classe_mage : 256colors, 64x64, Pal : classe_Pal, -> classe_mage_Sprite

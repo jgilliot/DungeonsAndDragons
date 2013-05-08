@@ -7,6 +7,7 @@ Position position_piece= *(new Position());
 visite=false;
 
 ennemi=NULL;
+envahie=false;
 
 n=NULL;
 e=NULL;
@@ -14,11 +15,18 @@ s=NULL;
 o=NULL;
 }
 
-Piece::Piece(int x,int y){
+Piece::Piece(int x,int y,int lvl){
 position_piece = *(new Position(x,y));
 visite=false;
-
+envahie=false;
 ennemi=NULL;
+int alea = PA_RandMax(10);
+
+envahie = false;
+if(alea==1){
+    ennemi=(new Mob(lvl)); // LABYRINTHE . LVL (niveau de mobs)
+    envahie=true;
+}
 
 n=NULL;
 e=NULL;
@@ -29,7 +37,7 @@ o=NULL;
 int Piece::getPosX(){return this->position_piece.getX();}
 int Piece::getPosY(){return this->position_piece.getY();}
 bool Piece::getVisite(){return this->visite;}
-
+bool Piece::est_envahie(){return envahie;}
 Piece * Piece::getVoisin(char direction){
 switch(direction){
 	case 'n':
@@ -251,7 +259,4 @@ int Piece::getCoinHD(){return this->coinHD;}
 int Piece::getCoinBG(){return this->coinBG;}
 int Piece::getCoinBD(){return this->coinBD;}
 
-/*
-void Piece::ajouterMonstre(Mob * monstre){
-	this->ennemi=monstre;
-}*/
+Mob * Piece::getEnnemi(){return this->ennemi;}

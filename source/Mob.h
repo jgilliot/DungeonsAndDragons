@@ -3,11 +3,13 @@
 #include "Combattant.h"
 #include "Variables.h"
 
-class Mob : public Combattant{
+class Mob : public Combattant {
 public:
-Mob(char * nom, char * race, char * classe,int lvl);
+    Mob();
+    Mob(int lvl);
+    Mob(char * nom, char * race, char * classe, int lvl);
 
-// faire fonction pour créer mob aléatoirement.
+    // faire fonction pour créer mob aléatoirement.
 };
 
 #endif
