@@ -4,9 +4,11 @@
 class Effet{
 public:
 Effet();
-Effet(char * nom,int pvMax,int pv,int mana,int manaMax,int force,int habilete,int intelligence,int endurance, int chance);
+Effet(char * nom,bool self,int tours,int pvMax,int pv,int mana,int manaMax,int force,int habilete,int intelligence,int endurance, int chance);
 
 char * getNom();
+bool getSelf();
+int getNb_tours();
 int getBonus_pvMax();
 int getBonus_pv();
 int getBonus_mana();
@@ -19,6 +21,7 @@ int getBonus_chance();
 
 private:
 char * nom;
+bool self;
 int bonus_pvMax;
 int bonus_pv;
 int bonus_mana;
@@ -28,5 +31,7 @@ int bonus_habilete;
 int bonus_intelligence;
 int bonus_endurance;
 int bonus_chance;
+int nb_tours;
+// mettre un nombre de tours pour les effets.
 };
 #endif

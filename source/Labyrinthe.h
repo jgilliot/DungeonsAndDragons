@@ -8,9 +8,10 @@ class Piece;
 class Labyrinthe{
 public:
 Labyrinthe();
-Labyrinthe(int larg, int haut);
+Labyrinthe(int larg, int haut,int lvl);
 int getLargeur();
 int getHauteur();
+int getLvl();
 
 Piece * getEntree();
 Piece * getSortie();
@@ -23,6 +24,7 @@ private:
 int largeur;
 int hauteur;
 
+int lvl;
 Piece ** niveau;
 Piece * entree;
 Piece * sortie;

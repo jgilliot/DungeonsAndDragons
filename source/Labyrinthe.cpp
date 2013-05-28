@@ -1,6 +1,5 @@
 #include "Labyrinthe.h"
 
-//#include <stdlib.h>
 #include <PA9.h>
 #include "gfx/all_gfx.h"
 using namespace std;
@@ -12,16 +11,16 @@ using namespace std;
 Labyrinthe::Labyrinthe(){
 hauteur = HAUTEUR_LABYRINTHE;
 largeur = LARGEUR_LABYRINTHE;
-
+lvl = 1;
 niveau = (Piece **) malloc (sizeof(Piece*)*largeur);
 for (int i=0;i<largeur;i++)
 		niveau[i]=(Piece *)malloc (sizeof(Piece)*hauteur);
 
 for(int i =0;i<largeur;i++)
 	for (int j=0;j<hauteur;j++)
-		niveau[i][j]=*(new Piece(i,j));
+		niveau[i][j]=*(new Piece(i,j,lvl));
 
-// on choisit une entrée et une sortie au hasard		
+// on choisit une entrï¿½e et une sortie au hasard		
 int randX = PA_RandMinMax(0,largeur-1);
 int randY = PA_RandMinMax(0,hauteur-1);
 entree=&niveau[randX][randY];
@@ -32,19 +31,19 @@ sortie=&niveau[randX][randY];
 this->modeler();
 }
 
-Labyrinthe::Labyrinthe(int larg, int haut){
+Labyrinthe::Labyrinthe(int larg, int haut,int lvl){
 hauteur=haut;
 largeur=larg;
-
+this->lvl = lvl;
 niveau = (Piece **) malloc (sizeof(Piece*)*larg);
 for (int i=0;i<larg;i++)
 		niveau[i]=(Piece *)malloc (sizeof(Piece)*haut);
 
 for(int i =0;i<larg;i++)
 	for (int j=0;j<haut;j++)
-		niveau[i][j]=*(new Piece(i,j));
+		niveau[i][j]=*(new Piece(i,j,lvl));
 
-// on choisit une entrée et une sortie au hasard 
+// on choisit une entrï¿½e et une sortie au hasard 
 int randX = PA_RandMinMax(0,largeur-1);
 int randY = PA_RandMinMax(0,hauteur-1);
 entree=&niveau[randX][randY];
@@ -143,7 +142,7 @@ while(this->niveau[xdroite][j].getVisite()!=true || this->niveau[xgauche][j].get
 
 void Labyrinthe::modeler(){
 
-	// on crée les couloirs principaux !
+	// on crï¿½e les couloirs principaux !
 	this->creer_chemin(0,0,'e');
 	this->niveau[1][0].setVoisin('o',this->niveau[0][0]);
 	
@@ -162,7 +161,7 @@ void Labyrinthe::modeler(){
 		int yhaut=salleY-1;
 		int ybas=salleY+1;
 			
-		// et on crée un lien !
+		// et on crï¿½e un lien !
 		switch(porte){
 		case 0:
 			this->niveau[salleX][salleY].setVoisin('n',this->niveau[salleX][yhaut]);

@@ -1,4 +1,7 @@
 #include "Explorateur.h"
+#include "Hero.h"
+#include "Mob.h"
+#include "Labyrinthe.h"
 
 Explorateur::Explorateur(){
 icone_map=new Sprite(3,0,*(new Taille(8,8)));
@@ -34,6 +37,10 @@ void Explorateur::se_deplace(Piece ** labyrinthe,char direction){
 		}
 		this->setPos(*p);
 		labyrinthe[p->getX()][p->getY()].setVisite(true);
+                if (labyrinthe[p->getX()][p->getY()].est_envahie()==true){
+                    hero_principal->combattre(*(labyrinthe[p->getX()][p->getY()].getEnnemi()));
+                    hero_principal->affiche_sur_minimap();
+                }
 	}
 }
 
